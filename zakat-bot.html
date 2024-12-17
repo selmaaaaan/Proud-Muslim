@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proud Muslim | Zakat Bot</title>
+    <link rel="icon" href="logo-preview.png">
+    <!-- Include Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="zakat-bot.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zakat Calculator For Livestock</h1>
+        <p>Select a category to calculate Zakat:</p>
+        <select id="category">
+            <option >--Select--</option>
+            <option value="camels">Camels</option>
+            <option value="sheep">Goats/Sheeps</option>
+            <option value="cows">Cows</option>
+        </select>
+        <div id="input-section">
+            <label for="amount">Enter the quantity or amount (after debt deduction):</label>
+            <input type="number" id="amount" placeholder="Enter value">
+            <span id="unit"></span> <!-- This will dynamically show the unit -->
+        </div>
+        <button id="calculate-btn">Calculate Zakat</button>
+        <div id="result"></div>
+        <div>
+            <h1>For Other Categories</h1>
+         <a href="https://www.ihcproject.com/general-zakah">  <p>Agricultaral Product</p></a> 
+         <a href="https://www.ihcproject.com/business-zakah">   <p>General Zakat</p></a> 
+         <a href="https://www.ihcproject.com/agricultural-zakah">  <p>Business Zakat</p></a> 
+        </div>
+        
+    </div>
+    <script src="zakat-bot.js"></script>
+</body>
+</html>

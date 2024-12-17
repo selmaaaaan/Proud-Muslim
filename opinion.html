@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proud Muslim | Islamic Chatbot</title>
+  <link rel="stylesheet" href="opinion.css">
+  <script defer src="opinion.js"></script>
+  <link rel="icon" href="suggestion.png">
+</head>
+<body >
+  <div class="loading-container" id="loading-screen">
+    <div class="logo-container">
+      <img src="suggestion.png" alt="Chatbot Logo" class="logo">
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+  <div class="chat-container" id="chat-container" style="display: none;">
+    <div class="question-section">
+      <h2>Opinions</h2>
+      <div class="question-buttons">
+        <button value="Does Islam promote terrorism?" onclick="sendQuestion(this.value)">Does Islam promote terrorism?</button>
+        <button value="Why does Islam allow practices like jihad, and does it mean 'holy war'?" onclick="sendQuestion(this.value)">Why does Islam allow practices like jihad, and does it mean 'holy war'?</button>
+        <button value="Does Islam suppress women’s rights?" onclick="sendQuestion(this.value)">Does Islam suppress women’s rights?</button>
+        <button value="Why is Islam associated with harsh punishments under Shariah?" onclick="sendQuestion(this.value)">Why is Islam associated with harsh punishments under Shariah?</button>
+        <button value="Can Muslims coexist with non-Muslims?" onclick="sendQuestion(this.value)">Can Muslims coexist with non-Muslims?</button>
+        <button value="Why is Islam perceived as anti-modern or backward?" onclick="sendQuestion(this.value)">Why is Islam perceived as anti-modern or backward?</button>
+        <button value="Why is Islam linked with oppression in Muslim-majority countries?" onclick="sendQuestion(this.value)">Why is Islam linked with oppression in Muslim-majority countries?</button>
+        <button value="Why does Islam promote practices like polygamy?" onclick="sendQuestion(this.value)">Why does Islam promote practices like polygamy?</button>
+        <button value="Why are there restrictions on freedom of speech in Islam?" onclick="sendQuestion(this.value)">Why are there restrictions on freedom of speech in Islam?</button>
+        <button value="Does Islam oppose LGBTQ+ rights?" onclick="sendQuestion(this.value)">Does Islam oppose LGBTQ+ rights?</button>
+        <button value="Why are Muslims accused of not integrating into Western societies?" onclick="sendQuestion(this.value)">Why are Muslims accused of not integrating into Western societies?</button>
+        <button value="What is Love Jihad, and is it supported by Islam?" onclick="sendQuestion(this.value)">What is Love Jihad, and is it supported by Islam?</button>
+      </div>
+    </div>
+    <div class="chat-section">
+      <div class="chatbox">
+        <div class="messages"></div>
+      </div>
+      <img src="message.png" alt="Paper Plane" class="paper-plane" id="plane-animation">
+    </div>
+  </div>
+</body>
+</html>

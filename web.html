@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proud Muslim | Web </title>
+    <link rel="icon" href="logo-preview.png">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Nexa';
+            src: url('fonts/Nexa-Light.woff2') format('woff2'),
+                url('fonts/Nexa-Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #e5e5e5;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .video-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Title Section */
+        .title-section {
+            text-align: left;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .subtitle {
+            color: gray;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+
+        /* Content Layout with Sidebar */
+        .content-layout {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .text-content {
+            flex: 3;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section with Video/Image -->
+    <header class="header">
+        <div class="video-container">
+            <img src="web.png" alt="Header pic" class="header-image">
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <main class="content">
+        <!-- Title Section -->
+        <section class="title-section">
+            <h1>Website & Terms of Use</h1>
+            <p class="subtitle">Website, downloads, and sharing content with groups</p>
+        </section>
+
+
+
+        <!-- Text Content and Sidebar -->
+        <section class="content-layout">
+            <div class="text-content">
+                <h1>Website</h1>
+                <p>How do I report a broken link, bug, or typo on your website? </p>
+                <br>
+                <p>Why is my web browser not displaying the Proud Muslim website correctly? </p>
+
+
+
+                <h1>Terms of Use</h1>
+                <p>What are the basic guidelines when sharing Proud Muslim content?</p>
+                <br>
+                <p>Can we show your videos at our mosque or Islamic events? </p>
+                <br>
+                <p>Can I upload your videos to my own YouTube channel or website? </p>
+                <br>
+                <p>I'm building an app. Can I use your content in it?
+                </p>
+
+
+                <h1>File Downloads</h1>
+                <p>Where can I find Islamic resources for download?</p>
+                <br>
+                <p>Can I download content in additional file formats? </p>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>

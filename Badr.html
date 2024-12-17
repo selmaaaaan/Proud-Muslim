@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proud Muslim | Battle of Badr</title>
+    <link rel="icon" href="logo-preview.png">
+    <Script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                // Hide the loading screen
+                document.getElementById("loading-screen").style.display = "none";
+
+                // Show the chat container
+                document.getElementById("chat-container").style.display = "flex";
+            }, 2600); // 2 second delay to show loading
+        });
+    </Script>
+
+</head>
+<style>
+    .loading-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #fff;
+        /* Blue background */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        /* Ensure loading screen is on top */
+    }
+
+    * {
+        font-family: 'Nexa';
+        src: url('fonts/Nexa-Light.woff2') format('woff2'),
+            url('fonts/Nexa-Light.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-weight: bold;
+
+
+    }
+
+    .logo-container {
+        text-align: center;
+    }
+
+    .logo {
+        width: 500px;
+        /* Set your logo width */
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: -15px;
+    }
+
+    /* Loading Bar */
+    .loading-bar {
+        width: 0;
+        height: 10px;
+        background-color: #724ae8;
+        /* Blue loading bar */
+        animation: loading 3s infinite;
+        margin: 0 auto;
+    }
+
+    /* Animation for the loading bar */
+    @keyframes loading {
+        0% {
+            width: 0;
+        }
+
+        50% {
+            width: 80%;
+        }
+
+        100% {
+            width: 0;
+        }
+
+    }
+
+    header {
+
+        width: 102%;
+        background-color: #fff;
+        padding: 10px 40px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        margin-top: -188px;
+        position: fixed;
+        z-index: 1;
+        margin-left: -23px;
+        height: 124px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: -120px;
+        font-size: 20px;
+    }
+
+    .navbar ul {
+        display: flex;
+        gap: 25px;
+        list-style: none;
+    }
+
+    .navbar ul li {
+
+        cursor: pointer;
+    }
+
+    .icons {
+        display: flex;
+        gap: 15px;
+        margin-left: 365px;
+    }
+
+    .icon {
+        cursor: pointer;
+
+    }
+
+    .icon img {
+        width: 18px;
+        height: 18px;
+    }
+
+
+
+
+    .opinion-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        border: 1px solid #fff;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        margin-left: 63px;
+    }
+
+    .opinion-button:hover {
+        background: #1a73e8;
+        border-color: #1a73e8;
+    }
+
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 15px 0;
+        font-size: 0.9rem;
+        border-top: 1px solid #ddd;
+        margin-top: 20px;
+    }
+
+    .logo {
+        width: 500px;
+        margin-left: -40px;
+    }
+
+    .arrow1 {
+        display: inline-flex;
+        fill: var(--icon-color, currentColor);
+        height: var(--icon-size, var(--size-2-5));
+        width: var(--icon-size, var(--size-2-5));
+    }
+
+    .arrow2 {
+        display: block;
+        width: 30px;
+    }
+
+    /* Reset and Body Styles */
+    /* Reset */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navbar styling */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 0px 20px;
+
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 20px;
+        color: #0078ff;
+    }
+
+    .menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .menu-item {
+        position: relative;
+    }
+
+    .menu-button {
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: #333;
+        position: relative;
+        padding: 5px;
+    }
+
+    .menu-button:hover {
+        color: #0078ff;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        background: rgb(245, 242, 242);
+
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 56px;
+        padding: 10px;
+        z-index: 1000;
+        width: 909px;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-left: -164px;
+
+    }
+
+    .dropdown ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown ul li {
+        margin: 5px 0;
+    }
+
+    .dropdown ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        display: block;
+        transition: color 0.2s;
+        padding-left: 69px;
+    }
+
+    .dropdown ul li a:hover {
+        color: #000000;
+        font-weight: bold;
+    }
+
+    #content {
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .blocks2 {
+
+        padding: 67px;
+        text-align: center;
+        background: #c1cde2;
+        margin-left: 121px;
+        width: 1264px;
+        border-radius: 56px;
+        margin-top: 52px;
+    }
+
+    .block2 {
+
+        padding-top: 389px;
+        margin-top: 70px;
+        display: flex;
+
+        border-radius: 56px;
+    }
+
+    .box1 {
+        width: 254px;
+        height: 318px;
+        background: white;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        margin-left: 46px;
+        margin-top: -340px;
+    }
+
+    .box2 {
+        display: flex;
+        background: white;
+        margin-top: -340px;
+        width: 254px;
+        height: 318px;
+        margin-left: 19px;
+        border-radius: 30px;
+    }
+
+    .box3 {
+        display: flex;
+        background: white;
+        width: 254px;
+        height: 318px;
+        margin-top: -340px;
+        margin-left: 19px;
+        border-radius: 30px;
+    }
+
+    .box4 {
+        display: flex;
+        background: white;
+        width: 254px;
+        height: 318px;
+        margin-top: -340px;
+        margin-left: 19px;
+        border-radius: 30px;
+    }
+
+
+
+
+
+
+
+
+
+
+    .footer1 {
+
+        width: 100%;
+        height: 100vh;
+
+    }
+
+
+
+    .footer2 {
+
+        width: 89%;
+        height: 100vh;
+        margin-left: 75px;
+        margin-top: 76px;
+    }
+
+    .footer3 {
+
+        width: 100%;
+        height: 41%;
+    }
+
+    .footer4 {
+
+        width: 100%;
+        height: 59%;
+        margin-top: 340px;
+    }
+
+
+
+
+
+
+
+    .boxa {
+        width: 88px;
+        height: 360px;
+
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        margin-left: 2px;
+        margin-top: -340px;
+    }
+
+    .boxb {
+        display: flex;
+
+        margin-top: -360px;
+        width: 276px;
+        height: 361px;
+        margin-left: 92px;
+        border-radius: 5px;
+    }
+
+    .boxc {
+        display: flex;
+
+        width: 439px;
+        height: 362px;
+        margin-top: -362px;
+        margin-left: 370px;
+        border-radius: 5px;
+    }
+
+    .boxd {
+        display: flex;
+
+        width: 504px;
+        height: 358px;
+        margin-top: -360px;
+        margin-left: 814px;
+        border-radius: 5px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .slideshow-container {
+        position: relative;
+        width: 83%;
+        overflow: hidden;
+        border-radius: 56px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        margin-top: 95px;
+    }
+
+    .slide {
+        display: none;
+        width: 100%;
+        height: 630px;
+    }
+
+    .slide img {
+
+        border-radius: 10px;
+        height: 630px;
+    }
+
+    .slide p {
+        position: absolute;
+        top: 41%;
+        left: 23%;
+        transform: translate(-50%, -50%);
+        background: none;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .dots {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #fff;
+    }
+
+    p.description {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    .butn1 {
+        position: absolute;
+        top: 62%;
+        left: 145px;
+        transform: translate(-50%, -50%);
+        background: none;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #fff;
+        border: 1px solid #fff;
+        background: transparent;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .butn1:hover {
+        background: #1a73e8;
+        border-color: #1a73e8;
+    }
+
+    .main1 {
+        width: 100%;
+        height: 600px;
+        margin-top: 44px;
+
+    }
+
+    .main2 {
+
+        width: 81%;
+
+        height: 630px;
+        margin: auto;
+        margin-top: auto;
+        border-radius: 56px;
+        display: flex;
+
+    }
+
+    a:hover {
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .mww {
+        background: white;
+        border-color: rgb(42 42 42);
+        color: rgb(0, 0, 0);
+        margin-left: 1005px;
+        margin-top: 98px;
+        width: 313px;
+        height: 54px;
+        border-radius: 14px;
+        font-size: 25px;
+
+    }
+
+    .mww:hover {
+        color: black;
+        font-weight: bold;
+    }
+
+    .footer1 {
+
+        width: 103%;
+        height: 106vh;
+        background-color: rgb(0, 0, 0);
+        margin-top: 1352px;
+        margin-left: -20px;
+
+    }
+
+    .nmm {
+        margin-left: -544px;
+        margin-top: 395px;
+        width: 270px;
+        height: 60px;
+        font-size: 17px;
+        border-radius: 10px;
+        border-color: black;
+        cursor: pointer;
+    }
+
+    .nmm:hover {
+        background-color: rgb(193, 193, 193);
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    #search-container {
+        position: relative;
+        margin: 20px;
+        margin-left: 353px;
+        transition: margin 0.3s ease;
+
+    }
+
+    #search-bar {
+        padding: 10px;
+        width: 300px;
+        font-size: 16px;
+        border: 2px solid #000000;
+        transition: width 0.3s ease, border-color 0.3s ease;
+        display: inline-block;
+        height: 32px;
+    }
+
+    #stop-button {
+        position: fixed;
+        z-index: 100000;
+        right: 0;
+        top: 0;
+        height: 42px;
+        background-color: #f0f0f0;
+        border: 2px solid;
+        border-left: navy;
+        cursor: pointer;
+        display: none;
+        padding: 10px;
+        font-weight: bold;
+        width: 200px;
+        text-align: center;
+    }
+
+    #stop-button.show {
+        display: inline-block;
+        /* Show when needed */
+    }
+
+    #stop-button:hover {
+        background-color: #e0e0e0;
+    }
+
+
+
+    .highlight {
+        background-color: yellow;
+        /* Highlight color */
+        transition: background-color 0.3s ease;
+    }
+
+    #search-bar:focus {
+        border-color: blue;
+        /* Highlight the search bar itself when focused */
+    }
+
+    /* Fixed position for search bar and stop button while searching */
+    .fixed-search-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        margin: 0;
+        padding: 10px 20px;
+        border: 2px solid blue;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 1560px;
+        /* Increased width while searching */
+    }
+
+    .fixed-search-container {
+        width: 1560px;
+        /* Adjust container width */
+    }
+
+    .fixed-stop-button {
+        position: fixed;
+        z-index: 100000;
+        right: 0;
+        top: 0;
+        height: 42px;
+        background-color: #f0f0f0;
+        border: 2px solid;
+        border-left: navy;
+        cursor: pointer;
+        display: none;
+        padding: 10px;
+        font-weight: bold;
+        width: 200px;
+        text-align: center;
+    }
+</style>
+
+
+
+<body style="background:  #c1cde2;  @font-face {
+
+">
+
+    <header>
+        <div>
+            <a href="index.html"> <img src="dffff__2_-removebg-preview.png" alt=""
+                    style="margin-left: 442px;     margin-top: -148px;"></a>
+        </div>
+
+
+
+
+
+    </header>
+
+    <div class="loading-container" id="loading-screen">
+        <div class="logo-container">
+
+            <img src="02.png" alt="Chatbot Logo" class="logo">
+            <h1 class="1">Battle Of Badr</h1>
+            <div class="loading-bar"></div>
+
+        </div>
+    </div>
+
+
+    <div style=" width: 50%; ; height: 97vh; margin-left: 387px;">
+        <h1 style="margin-left: 237px; margin-top: 188px;">The Battle of Badr </h1>
+        <p style="@font-face {
+            font-family: 'Nexa';
+            src: url('fonts/Nexa-Bold.woff2') format('woff2'),
+                 url('fonts/Nexa-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        } 
+        font-family: 'Nexa';
+    src: url('fonts/Nexa-Light.woff2') format('woff2'),
+         url('fonts/Nexa-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: bold;
+}"> <span style="font-size: 26px;">The Battle of Badr (جَزْبَة بَدْر) is one of the most significant events in
+                Islamic history, occurring
+                in the
+                2nd
+                year of the Hijra (624 CE) in the Islamic calendar. It was a battle between the early Muslims of Medina,
+                led
+                by
+                Prophet Muhammad (PBUH), and the Quraysh tribe of Mecca, who were hostile to the Prophet and his
+                followers.
+                <br>
+                <br>
+
+                <strong> Angels in Badr:</strong> The most notable aspect of the story of Badr is the involvement of
+                angels.
+                The Qur'an
+                mentions
+                that Allah sent angels to assist the Muslims during the battle. The angels played a key role in the
+                victory,
+                encouraging the Muslims and fighting alongside them, though the physical presence of the angels was not
+                visible
+                to the Muslims at the time.
+                <br>
+
+                <br>
+                <strong> The Qur'anic Reference:</strong> In Surah Al-Anfal (8:9), it is mentioned:
+
+                “[Remember] when you implored your Lord for help, and He answered you: ‘I will reinforce you with a
+                thousand
+                of
+                the angels, rank upon rank.’” (Quran 8:9)
+                <br>
+                <br>
+
+                This verse shows that the angels' support was a divine intervention, helping the Muslims overcome a
+                larger
+                and
+                better-equipped enemy force. According to Islamic tradition, the Prophet Muhammad (PBUH) and his
+                companions
+                were
+                told that the angels would assist them in the battle, strengthening their hearts and their resolve.
+                <br>
+                <br>
+
+                <strong> Significance of the Battle:</strong> The Battle of Badr was not just a military victory; it was
+                a
+                spiritual victory
+                for
+                the Muslims. The assistance of angels reinforced the belief among the Muslims that Allah was supporting
+                their
+                cause. The Quraysh, who had outnumbered the Muslims, suffered a crushing defeat, and it marked a turning
+                point
+                in the struggle between Islam and the Quraysh.
+
+                <br>
+                <br>
+
+                <strong> Moral Lessons:</strong> The story of Badr serves as a reminder of several key themes in Islamic
+                belief:
+
+                <div stystyle="@font-face {
+                    font-family: 'Nexa';
+                    src: url('fonts/Nexa-Bold.woff2') format('woff2'),
+                         url('fonts/Nexa-Bold.woff') format('woff');
+                    font-weight: bold;
+                    font-style: normal;
+                } 
+                font-family: 'Nexa';
+            src: url('fonts/Nexa-Light.woff2') format('woff2'),
+                 url('fonts/Nexa-Light.woff') format('woff');
+            font-weight:  bold;
+            font-style: normal;
+        ">
+                    <ul style=" font-size: 26px; font-family: 'Nexa' ; src: url('fonts/Nexa-Bold.woff2')
+                    format('woff2'), url('fonts/Nexa-Bold.woff') format('woff'); font-weight: bold; font-style: normal;
+                    font-family: 'Nexa' ; src: url('fonts/Nexa-Light.woff2') format('woff2'),
+                    url('fonts/Nexa-Light.woff') format('woff'); font-weight: normal; font-style: normal; ">
+                        <li> The power of faith and reliance on Allah.</li>
+                        <li> Divine help in times of struggle.</li>
+                        <li> The importance of unity and perseverance.</li>
+                        <li> The victory of righteousness over oppression.</li>
+                    </ul>
+                    <span style=" font-size: 26px; font-family: 'Nexa';
+                    src: url('fonts/Nexa-Light.woff2') format('woff2'),
+                         url('fonts/Nexa-Light.woff') format('woff');
+                    font-weight: bold;
+                    font-style: normal;">The role of angels in the Battle of Badr is often interpreted as a
+                        sign
+                        of Allah's mercy and support for
+                        the
+                        believers, and a confirmation that divine intervention is available to those who strive in His
+                        cause
+                    </span>.
+
+                </div>
+        </p></span>
+        <br>
+        <br>
+        <br>
+
+    </div>
+    <div class="footer1">
+        <div class="footer2">
+            <div class="footer3">
+                <a href="supports.html"> <button class="mww">Support</button></a>
+                <p
+                    style="   margin-left: -43px;  padding-top: 26px;      font-size: 31px;   font-weight: 900;  margin-top: -149px; color: white;">
+
+
+                    Empowered by the grace of Allah and the generosity of <br>believers, we bring knowledge and
+                    inspiration <br> to all—free for everyone, forever
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="footer4">
+
+                <div class="blockb">
+                    <div class="boxa">
+                        <a href="index.html"> <img src="logo-preview.png"
+                                style="    width: 144px; margin-top: -159px;  margin-left: -53px;"></a>
+
+                    </div>
+                    <div class="boxb">
+
+
+                        <ul style="margin-left: 30px;    font-size: 25px;  margin-top: 40px;">
+                            <a href="support.html" style="text-decoration: none;  "> <span style="color: white;">
+                                    Get support</span> </a>
+                            <br>
+                            <a href="careers.html" style="text-decoration: none;"> <span style="color: white;">
+                                    Careers</span> </a>
+                            <br>
+                            <a href="store.html" style="text-decoration: none;"> <span style="color: white;">
+                                    Store</span> </a>
+                            <br>
+                            <a href="grand.html" style="text-decoration: none;"><span style="color: white;"> Grand
+                                    Guidelines</span> </a>
+                            <br>
+                            <a href="policy.html" style="text-decoration: none;"> <span style="color: white;">
+                                    Privacy
+                                    Policy</span> </a>
+                            <br>
+                            <a href="use.html" style="text-decoration: none;"><span style="color: white;"> Terms of
+                                    Use</span> </a>
+
+                        </ul>
+
+
+                    </div>
+                    <div class="boxc">
+                        <p style="font-size: 25px;    font-weight: 800;   margin-top: 37px; color: white;"> <span
+                                style="margin-left: -1px;">Follow Us</span></p>
+                        <br>
+                        <a href="https://www.facebook.com/ "> <img src="facebook-logo.png" alt="  please refresh"
+                                style="height: 40px;      margin-top: 83px;  margin-left: -146px;"></a>
+                        <a
+                            href="https://www.google.com/search?q=youtube&oq=you&gs_lcrp=EgZjaHJvbWUqDQgAEAAYgwEYsQMYgAQyDQgAEAAYgwEYsQMYgAQyBggBEEUYOTINCAIQABiDARixAxiABDINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIKCAUQABixAxiABDINCAYQABiDARixAxiABDINCAcQABiDARixAxiABDIHCAgQABiPAjIHCAkQABiPAtIBCTM2MDVqMGoxNagCCLACAQ&sourceid=chrome&ie=UTF-8">
+                            <img src="video (1).png" alt="please refresh"
+                                style="height: 40px;      margin-top: 83px;  margin-left: -86px;"></a>
+                        <a href="https://x.com/?lang=en"> <img src="twitter.png" alt="please refresh"
+                                style="    height: 50px;  margin-top: 78px; margin-left: -44px;"></a>
+                        <a href="https://www.instagram.com/accounts/login/?hl=en"> <img src="instagram.png"
+                                alt="please refresh"
+                                style="height: 50px;      margin-top: 78px;  margin-left: -1px;"></a>
+
+
+                        <br>
+                        <p
+                            style="font-size: 25px;  font-weight: 800;  margin-top: 160px;  margin-left: -191px; color: white;">
+                            Download The App</p>
+                        <a href="https://www.apple.com/in/app-store/"><img src="pngwing.com.png" alt="please refresh"
+                                style="   height: 57px;   margin-top: 208px;   margin-left: -256px;"></a>
+
+                        <a href="https://play.google.com/store/games?hl=en"> <img src="playstore.png"
+                                alt="please refresh"
+                                style="      height: 82px;      margin-top: 197px;      margin-left: -190px; "></a>
+                    </div>
+                    <div class="boxd">
+
+
+                        <p
+                            style="font-size: 25px;    font-weight: 800;   margin-top: 37px;     margin-left: 38px; color: white;">
+                            Receive Proud muslim <br> videos and updates in <br> your inbox.</p>
+
+                        <input placeholder="Email"
+                            style="       border-color: white;    height: 57px;     margin-top: 196px;    margin-left: -299px;   width: 63%;   border-radius: 13px;   font-size: 28px;  padding-left: 17px; background:  rgb(42 42 42)">
+                        <button
+                            style="    height: 57px;  width: 54px;     margin-top: 195px;  border-radius: 13px;  margin-left: 14px;    border-color: white; background-color:  rgb(42 42 42);">
+                            <img src="right-arrow.png" alt="please refresh" style="height: 48px;"></button>
+                    </div>
+                    <p style="color: white;     color: white;    margin-left: -68px;  margin-top: 30px;">&copy;
+                        Shihab
+                        Thangal Islamic Academy 2024 | All rights reserved</p>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proud Muslim | Advent Series</title>
+    <link rel="icon" href="logo-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nexa';
+            src: url('fonts/Nexa-Light.woff2') format('woff2'),
+                url('fonts/Nexa-Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-weight: normal;
+            ;
+        }
+
+        body {
+            font-family: 'Nexa';
+            src: url('fonts/Nexa-Light.woff2') format('woff2'),
+                url('fonts/Nexa-Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-weight:normal;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #000000;
+            /* Adjust for readability */
+        }
+
+        em,
+        i {
+            font-style: italic;
+            /* Ensures italics match the look in the image */
+        }
+
+
+        body {
+            background-color: #f8f9fa;
+            color: #000000;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: sticky;
+            top: 20px;
+
+            height: fit-content;
+            z-index: 1000000000;
+
+        }
+
+        .featured-image {
+            width: 100%;
+            border-radius: 40px;
+            margin-bottom: 20px;
+        }
+
+        .series-info h4 {
+            font-size: 0.9rem;
+            color: #000000;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .series-info h1 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .series-info p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .series-info small {
+            font-size: 0.85rem;
+            color: #000000;
+        }
+
+        /* Right Section */
+        .right-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            z-index: 10000000000;
+        }
+
+        .right-section h3 {
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .episode {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .episode:hover {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .episode-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .episode-info h4 {
+            font-size: 0.9rem;
+            color: #000000;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .episode-info h2 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        .episode-info p {
+            font-size: 0.95rem;
+            color: #000000;
+            margin-bottom: 4px;
+        }
+
+        .episode-info span {
+            font-size: 0.85rem;
+            color: #000000;
+        }
+
+        h4,
+        h2,
+        p:hover {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+
+            width: 102%;
+            background-color: #fff;
+            padding: 10px 40px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            margin-top: -150px;
+            position: fixed;
+            z-index: -1000000000;
+            margin-left: -23px;
+            height: 124px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: -120px;
+            font-size: 20px;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .navbar ul li {
+
+            cursor: pointer;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+            margin-left: 365px;
+        }
+
+        .icon {
+            cursor: pointer;
+
+        }
+
+        .icon img {
+            width: 18px;
+            height: 18px;
+        }
+
+
+
+
+        .opinion-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            border: 1px solid #fff;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-left: 63px;
+        }
+
+        .opinion-button:hover {
+            background: #1a73e8;
+            border-color: #1a73e8;
+        }
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .logo {
+            width: 500px;
+            margin-left: -40px;
+        }
+
+        .arrow1 {
+            display: inline-flex;
+            fill: var(--icon-color, currentColor);
+            height: var(--icon-size, var(--size-2-5));
+            width: var(--icon-size, var(--size-2-5));
+        }
+
+        .arrow2 {
+            display: block;
+            width: 30px;
+        }
+
+        /* Reset and Body Styles */
+        /* Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 0px 20px;
+
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            color: #0078ff;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu-item {
+            position: relative;
+        }
+
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: #333;
+            position: relative;
+            padding: 5px;
+        }
+
+        .menu-button:hover {
+            color: #0078ff;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            background: rgb(245, 242, 242);
+
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 56px;
+            padding: 10px;
+            z-index: 1000;
+            width: 909px;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-left: -164px;
+
+        }
+
+        .dropdown ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown ul li {
+            margin: 5px 0;
+        }
+
+        .dropdown ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            display: block;
+            transition: color 0.2s;
+            padding-left: 69px;
+        }
+
+        .dropdown ul li a:hover {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        #content {
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .blocks2 {
+
+            padding: 67px;
+            text-align: center;
+            background: #c1cde2;
+            margin-left: 121px;
+            width: 1264px;
+            border-radius: 56px;
+            margin-top: 52px;
+        }
+
+        .block2 {
+
+            padding-top: 389px;
+            margin-top: 70px;
+            display: flex;
+
+            border-radius: 56px;
+        }
+
+        .box1 {
+            width: 254px;
+            height: 318px;
+            background: white;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            margin-left: 46px;
+            margin-top: -340px;
+        }
+
+        .box2 {
+            display: flex;
+            background: white;
+            margin-top: -340px;
+            width: 254px;
+            height: 318px;
+            margin-left: 19px;
+            border-radius: 30px;
+        }
+
+        .box3 {
+            display: flex;
+            background: white;
+            width: 254px;
+            height: 318px;
+            margin-top: -340px;
+            margin-left: 19px;
+            border-radius: 30px;
+        }
+
+        .box4 {
+            display: flex;
+            background: white;
+            width: 254px;
+            height: 318px;
+            margin-top: -340px;
+            margin-left: 19px;
+            border-radius: 30px;
+        }
+
+
+
+
+
+
+
+
+
+
+        .footer1 {
+
+            width: 100%;
+            height: 100vh;
+
+        }
+
+
+
+        .footer2 {
+
+            width: 89%;
+            height: 100vh;
+            margin-left: 75px;
+            margin-top: 76px;
+        }
+
+        .footer3 {
+
+            width: 100%;
+            height: 41%;
+        }
+
+        .footer4 {
+
+            width: 100%;
+            height: 59%;
+            margin-top: 340px;
+        }
+
+
+
+
+
+
+
+        .boxa {
+            width: 88px;
+            height: 360px;
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            margin-left: 2px;
+            margin-top: -340px;
+        }
+
+        .boxb {
+            display: flex;
+
+            margin-top: -360px;
+            width: 276px;
+            height: 361px;
+            margin-left: 92px;
+            border-radius: 5px;
+        }
+
+        .boxc {
+            display: flex;
+
+            width: 439px;
+            height: 362px;
+            margin-top: -362px;
+            margin-left: 370px;
+            border-radius: 5px;
+        }
+
+        .boxd {
+            display: flex;
+
+            width: 504px;
+            height: 358px;
+            margin-top: -360px;
+            margin-left: 814px;
+            border-radius: 5px;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        .slideshow-container {
+            position: relative;
+            width: 83%;
+            overflow: hidden;
+            border-radius: 56px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-top: 95px;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 630px;
+        }
+
+        .slide img {
+
+            border-radius: 10px;
+            height: 630px;
+        }
+
+        .slide p {
+            position: absolute;
+            top: 41%;
+            left: 23%;
+            transform: translate(-50%, -50%);
+            background: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #fff;
+        }
+
+        p.description {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .butn1 {
+            position: absolute;
+            top: 62%;
+            left: 145px;
+            transform: translate(-50%, -50%);
+            background: none;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            border: 1px solid #fff;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .butn1:hover {
+            background: #1a73e8;
+            border-color: #1a73e8;
+        }
+
+        .main1 {
+            width: 100%;
+            height: 600px;
+            margin-top: 44px;
+
+        }
+
+        .main2 {
+
+            width: 81%;
+
+            height: 630px;
+            margin: auto;
+            margin-top: auto;
+            border-radius: 56px;
+            display: flex;
+
+        }
+
+        a:hover {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .mww {
+            background: white;
+            border-color: rgb(42 42 42);
+            color: rgb(0, 0, 0);
+            margin-left: 1005px;
+            margin-top: 98px;
+            width: 313px;
+            height: 54px;
+            border-radius: 14px;
+            font-size: 25px;
+
+        }
+
+        .mww:hover {
+            color: black;
+            font-weight: bold;
+        }
+
+        .footer1 {
+
+            width: 103%;
+            height: 106vh;
+            background-color: rgb(0, 0, 0);
+            margin-top: 352px;
+            margin-left: -20px;
+
+        }
+
+        .nmm {
+            margin-left: -544px;
+            margin-top: 395px;
+            width: 270px;
+            height: 60px;
+            font-size: 17px;
+            border-radius: 10px;
+            border-color: black;
+            cursor: pointer;
+        }
+
+        .nmm:hover {
+            background-color: rgb(193, 193, 193);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        #search-container {
+            position: relative;
+            margin: 20px;
+            margin-left: 353px;
+            transition: margin 0.3s ease;
+
+        }
+
+        #search-bar {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border: 2px solid #000000;
+            transition: width 0.3s ease, border-color 0.3s ease;
+            display: inline-block;
+            height: 32px;
+        }
+
+        #stop-button {
+            position: fixed;
+            z-index: 100000;
+            right: 0;
+            top: 0;
+            height: 42px;
+            background-color: #f0f0f0;
+            border: 2px solid;
+            border-left: navy;
+            cursor: pointer;
+            display: none;
+            padding: 10px;
+            font-weight: bold;
+            width: 200px;
+            text-align: center;
+        }
+
+        #stop-button.show {
+            display: inline-block;
+            /* Show when needed */
+        }
+
+        #stop-button:hover {
+            background-color: #e0e0e0;
+        }
+
+
+
+        .highlight {
+            background-color: yellow;
+            /* Highlight color */
+            transition: background-color 0.3s ease;
+        }
+
+        #search-bar:focus {
+            border-color: blue;
+            /* Highlight the search bar itself when focused */
+        }
+
+        /* Fixed position for search bar and stop button while searching */
+        .fixed-search-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            margin: 0;
+            padding: 10px 20px;
+            border: 2px solid blue;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 1560px;
+            /* Increased width while searching */
+        }
+
+        .fixed-search-container {
+            width: 1560px;
+            /* Adjust container width */
+        }
+
+        .fixed-stop-button {
+            position: fixed;
+            z-index: 100000;
+            right: 0;
+            top: 0;
+            height: 42px;
+            background-color: #f0f0f0;
+            border: 2px solid;
+            border-left: navy;
+            cursor: pointer;
+            display: none;
+            padding: 10px;
+            font-weight: bold;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+
+            <img src="sr.png" alt="Advent Series Image" class="featured-image" ">
+        </div>
+
+        <!-- Right Section -->
+        <div class=" right-section">
+            <div class="series-info">
+                <h1 style="margin: auto; ">Advent Series</h1>
+                <p>Each episode in this series explores a central theme in Islam through storytelling, reflection, and
+                    practical application. Designed for daily spiritual growth, it combines Quranic stories, lessons
+                    from the life of the Prophet Muhammad (PBUH), and timeless Islamic values.</p>
+                <small>Advent Series • 10 Episodes</small>
+                <br>
+                <br>
+            </div>
+            <h3>10 EPISODES</h3>
+
+            <a href="ep1.html">
+                <div class="episode">
+                    <img src="ep1.png" alt="Episode 1" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 1</h4>
+                        <h2>The Spark of Faith</h2>
+                        <p>In a land of idol worship, Prophet Ibrahim (AS) embarked on a journey to discover the truth,
+                            rejecting celestial and man-made entities as divine. His realization of Allah’s eternal
+                            oneness
+                            stands as a timeless lesson, urging humanity to seek truth and reflect on the signs of the
+                            Creator.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ep2.html">
+                <div class="episode">
+                    <img src="ep2.png" alt="Episode 2" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 2</h4>
+                        <h2>A Light in the Cave</h2>
+                        <p>In the stillness of Cave Hira, Prophet Muhammad (PBUH) received the first revelation through
+                            Angel Jibreel (AS), marking the beginning of Islam. This divine message of monotheism,
+                            justice,
+                            and guidance transformed humanity forever.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ep3.html">
+                <div class="episode">
+                    <img src="ep3.png" alt="Episode 3" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 3</h4>
+                        <h2> The Patience of Ayyub (AS)</h2>
+                        <p>Prophet Ayyub (AS) endured immense trials with unwavering patience and faith in Allah. As a
+                            reward, Allah restored his blessings, highlighting the power of trust and divine mercy.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ep4.html">
+                <div class="episode">
+                    <img src="ep4.png" alt="Episode 4" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 4</h4>
+                        <h2>The Mercy of Allah</h2>
+                        <p>A man who killed 99 sought repentance, and a scholar assured him of Allah's mercy. Dying en
+                            route to a righteous community, Allah forgave him for his sincere intentions.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="ep5.html">
+                <div class="episode">
+                    <img src="ep5.png" alt="Episode 5" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 5</h4>
+                        <h2> The Strength of Sisterhood and Brotherhood</h2>
+                        <p>When Prophet Muhammad (PBUH) and his companions migrated to Medina, the Ansar warmly welcomed
+                            the Muhajirun, sharing their resources selflessly. Their actions embodied the Quranic verse:
+                            "They give [them] preference over themselves, even though they are in privation." (Quran
+                            59:9).</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ep6.html">
+                <div class="episode">
+                    <img src="ep6.png" alt="Episode 6" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 6</h4>
+                        <h2>The Power of Dua</h2>
+                        <p>Prophet Zakariya (AS) prayed sincerely for a child, and despite his old age, Allah granted
+                            him a son, Yahya (AS). This story highlights the power of dua and trust in Allah’s timing
+                            and wisdom.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="ep7.html">
+                <div class="episode">
+                    <img src="ep7.png" alt="Episode 7" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 7</h4>
+                        <h2> Justice and Integrity</h2>
+                        <p>Caliph Umar ibn al-Khattab (RA) personally carried food to a needy family, emphasizing
+                            personal responsibility and justice. His humility and commitment to fairness continue to
+                            inspire as a model of leadership.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ep8.html">
+                <div class="episode">
+                    <img src="ep8.png" alt="Episode 8" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 8</h4>
+                        <h2>The Night Journey</h2>
+                        <p>The Night Journey (Isra and Miraj) saw Prophet Muhammad (PBUH) travel from Mecca to Jerusalem
+                            and ascend to the heavens, receiving the gift of Salah. This miraculous event highlights
+                            Allah's power and the essential role of prayer in a believer’s life.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="ep9.html">
+                <div class="episode">
+                    <img src="ep9.png" alt="Episode 9" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 9</h4>
+                        <h2>Generosity of the Heart</h2>
+                        <p>Prophet Muhammad (PBUH) was known for his boundless generosity, inspiring a culture of giving
+                            within the community. His selflessness, extending beyond material wealth, strengthened bonds
+                            and earned Allah’s pleasure.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="ep10.html">
+                <div class="episode">
+                    <img src="ep10.png" alt="Episode 10" class="episode-image">
+                    <div class="episode-info">
+                        <h4>Episode 10</h4>
+                        <h2>The Eternal Light</h2>
+                        <p>Paradise (Jannah) is a place of beauty, joy, and peace, with the ultimate reward being the
+                            opportunity to see Allah. This promise motivates believers to live righteously and strive
+                            for Allah’s pleasure, bringing them closer to eternal bliss.</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <div class="footer1">
+        <div class="footer2">
+            <div class="footer3">
+                <a href="supports.html"> <button class="mww">Support</button></a>
+                <p
+                    style="   margin-left: -43px;  padding-top: 26px;      font-size: 31px;   font-weight: 900;  margin-top: -149px; color: white;">
+
+
+                    Empowered by the grace of Allah and the generosity of <br>believers, we bring knowledge and
+                    inspiration <br> to all—free for everyone, forever
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="footer4">
+
+                <div class="blockb">
+                    <div class="boxa">
+                        <a href="index.html"> <img src="logo-preview.png"
+                                style="    width: 131px;   margin-top: -142px; margin-left: -53px;"></a>
+
+                    </div>
+                    <div class="boxb">
+
+
+                        <ul style="margin-left: 30px;    font-size: 25px;  margin-top: 40px;">
+                            <a href="support.html" style="text-decoration: none;  "> <span style="color: white;">
+                                    Get support</span> </a>
+                            <br>
+                            <a href="careers.html" style="text-decoration: none;"> <span style="color: white;">
+                                    Careers</span> </a>
+                            <br>
+                            <a href="store.html" style="text-decoration: none;"> <span style="color: white;">
+                                    Store</span> </a>
+                            <br>
+                            <a href="grand.html" style="text-decoration: none;"><span style="color: white;"> Grand
+                                    Guidelines</span> </a>
+                            <br>
+                            <a href="policy.html" style="text-decoration: none;"> <span style="color: white;">
+                                    Privacy
+                                    Policy</span> </a>
+                            <br>
+                            <a href="use.html" style="text-decoration: none;"><span style="color: white;"> Terms of
+                                    Use</span> </a>
+
+                        </ul>
+
+
+                    </div>
+                    <div class="boxc">
+                        <p style="font-size: 25px;    font-weight: 800;   margin-top: 37px; color: white;"> <span
+                                style="margin-left: -1px;">Follow Us</span></p>
+                        <br>
+                        <a href="https://www.facebook.com/ "> <img src="facebook-logo.png" alt="  please refresh"
+                                style="height: 40px;      margin-top: 83px;  margin-left: -146px;"></a>
+                        <a
+                            href="https://www.google.com/search?q=youtube&oq=you&gs_lcrp=EgZjaHJvbWUqDQgAEAAYgwEYsQMYgAQyDQgAEAAYgwEYsQMYgAQyBggBEEUYOTINCAIQABiDARixAxiABDINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDIKCAUQABixAxiABDINCAYQABiDARixAxiABDINCAcQABiDARixAxiABDIHCAgQABiPAjIHCAkQABiPAtIBCTM2MDVqMGoxNagCCLACAQ&sourceid=chrome&ie=UTF-8">
+                            <img src="video (1).png" alt="please refresh"
+                                style="height: 40px;      margin-top: 83px;  margin-left: -86px;"></a>
+                        <a href="https://x.com/?lang=en"> <img src="twitter.png" alt="please refresh"
+                                style="    height: 50px;  margin-top: 78px; margin-left: -44px;"></a>
+                        <a href="https://www.instagram.com/accounts/login/?hl=en"> <img src="instagram.png"
+                                alt="please refresh"
+                                style="height: 50px;      margin-top: 78px;  margin-left: -1px;"></a>
+
+
+                        <br>
+                        <p
+                            style="font-size: 25px;  font-weight: 800;  margin-top: 160px;  margin-left: -191px; color: white;">
+                            Download The App</p>
+                        <a href="https://www.apple.com/in/app-store/"><img src="pngwing.com.png" alt="please refresh"
+                                style="   height: 57px;   margin-top: 208px;   margin-left: -256px;"></a>
+
+                        <a href="https://play.google.com/store/games?hl=en"> <img src="playstore.png"
+                                alt="please refresh"
+                                style="      height: 82px;      margin-top: 197px;    margin-left: 10px; "></a>
+                    </div>
+                    <div class="boxd">
+
+
+                        <p
+                            style="font-size: 25px;    font-weight: 800;   margin-top: 37px;     margin-left: 38px; color: white;">
+                            Receive Proud muslim <br> videos and updates in <br> your inbox.</p>
+
+                        <input placeholder="Email"
+                            style="       border-color: white;    height: 57px;     margin-top: 196px;    margin-left: -299px;   width: 63%;   border-radius: 13px;   font-size: 28px;  padding-left: 17px; background:  rgb(42 42 42)">
+                        <button
+                            style="    height: 57px;  width: 54px;     margin-top: 195px;  border-radius: 13px;  margin-left: 14px;    border-color: white; background-color:  rgb(42 42 42);">
+                            <img src="right-arrow.png" alt="please refresh" style="height: 48px;"></button>
+                    </div>
+                    <p style="color: white;     color: white;    margin-left: -68px;  margin-top: 30px;">&copy;
+                        Shihab
+                        Thangal Islamic Academy 2024 | All rights reserved</p>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

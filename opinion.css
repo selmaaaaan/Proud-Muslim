@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nexa';
+  src: url('fonts/Nexa-Light.woff2') format('woff2'),
+    url('fonts/Nexa-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.loading-bar {
+  width: 0;
+  height: 10px;
+  background-color: #0069d9;
+  animation: loading 3s infinite;
+  margin: 0 auto;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 80%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1a73e8, #dbeafe);
+  color: #fff;
+  display: none;
+}
+
+.question-section {
+  width: 100%;
+  background: #1a73e8;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.question-buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.question-buttons button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #003b8b;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.question-buttons button:hover {
+  background: #004ba0;
+}
+
+.chat-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.chatbox {
+  width: 100%;
+  max-width: 600px;
+  height: 80%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 20px #00000033;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.message p {
+  margin: 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 70%;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.message.outgoing p {
+  background: #1a73e8;
+  color: white;
+  margin-left: auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.message.incoming p {
+  background: #f0f0f0;
+  color: #000;
+  margin-right: auto;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.paper-plane {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.animate-plane {
+  display: block;
+  animation: fly 1s ease-in-out;
+}
+
+@keyframes fly {
+  from {
+    left: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  to {
+    left: 80%;
+    transform: translate(-50%, -200%) scale(0.8);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .question-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .question-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .question-buttons button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .chatbox {
+    max-width: 100%;
+    height: 70%;
+  }
+
+  .messages {
+    gap: 10px;
+  }
+
+  .message p {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .paper-plane {
+    width: 40px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .question-buttons button {
+    font-size: 0.85rem;
+  }
+
+  .chatbox {
+    max-width: 80%;
+    height: 70%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .chat-container {
+    flex-direction: row;
+  }
+
+  .question-section {
+    width: 35%;
+    padding: 20px;
+  }
+
+  .chatbox {
+    max-width: 600px;
+    height: 80%;
+  }
+}
